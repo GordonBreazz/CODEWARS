@@ -59,7 +59,8 @@ function extractAll(arr, maxn){
 }
 
 function aroundMap(arr, x, y, value){
-  let st = ''
+  let st = '' 
+  
   if (arr[y][x] !== value) return 0  
   //[ ][ ][ ]
   //[*][ ][ ]
