@@ -1,0 +1,27 @@
+{
+  "name": "codewars",
+  "version": "1.0.0",
+  "description": "my solution for codewars problems with JEST tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GordonBreazz/CODEWARS.git"
+  },
+  "keywords": [
+    "codewars",
+    "JEST",
+    "unit testing"
+  ],
+  "author": "Egor Konnov miavergo@outlook.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GordonBreazz/CODEWARS/issues"
+  },
+  "homepage": "https://github.com/GordonBreazz/CODEWARS#readme",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
