@@ -26,7 +26,7 @@ const encodeRailFenceCipher = function(string, numberRails) {
     return [...rls].join('')
   }
   
-  function decodeRailFenceCipher(string, numberRails) {
+  const decodeRailFenceCipher = function(string, numberRails) {
     // code
     // get length of strings
     let rls = Array(numberRails).fill('')
@@ -60,4 +60,5 @@ const encodeRailFenceCipher = function(string, numberRails) {
   }
 
 //export for test
-module.exports = encodeRailFenceCipher
+
+module.exports = {decodeRailFenceCipher, encodeRailFenceCipher}
