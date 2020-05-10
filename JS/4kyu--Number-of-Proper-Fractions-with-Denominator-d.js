@@ -29,3 +29,5 @@ const properFractions = function(N){
   }
 
   module.exports = {properFractions}
+
+  
