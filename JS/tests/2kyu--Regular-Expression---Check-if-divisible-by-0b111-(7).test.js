@@ -29,13 +29,4 @@ describe('Gentle fixed tests', function() {
 
 
 
-  
-//   Test.describe('Gentle fixed tests', function() {
-//     Test.it('100 fixed tests', function() {
-//       for(let i=1; i<=100; i++) {
-//         console.log(`Testing for: ${i}`)
-//         Test.assertEquals(solution.test(i.toString(2)), i%7===0);
-//       }
-//     })
-//   })
-  
+
