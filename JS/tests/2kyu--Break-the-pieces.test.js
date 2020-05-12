@@ -1,7 +1,7 @@
 //const {breakPieces} = require('../2kyu--Break-the-pieces.js')
 const breakPieces = require('../2kyu--Break-the-pieces.js');
 
-
+describe('2kyu. Break the pieces test', function() {
 var shape = 
 ["+------------+",
  "|            |",
@@ -37,6 +37,7 @@ test('breakPieces should return three shapes ', () => {
   //   })
   //  let b = solution.sort(function(a, b){return a > b})
   expect( breakPieces(shape).sort()).toEqual(solution.sort()) 
+})
 })
 
 
