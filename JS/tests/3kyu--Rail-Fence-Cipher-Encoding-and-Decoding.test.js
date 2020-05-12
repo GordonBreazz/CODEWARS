@@ -9,7 +9,7 @@ test('#1 encodeRailFenceCipher should return WECRLTEERDSOEEFEAOCAIVDEN', () => {
     expect( encodeRailFenceCipher("WEAREDISCOVEREDFLEEATONCE", 3) ).toEqual("WECRLTEERDSOEEFEAOCAIVDEN") 
 })
 
- test('#2 decodeRailFenceCipher should return WEAREDISCOVEREDFLEEATONCE', () => {
+test('#2 decodeRailFenceCipher should return WEAREDISCOVEREDFLEEATONCE', () => {
      expect( decodeRailFenceCipher("WECRLTEERDSOEEFEAOCAIVDEN", 3) ).toEqual("WEAREDISCOVEREDFLEEATONCE") 
  })
 
