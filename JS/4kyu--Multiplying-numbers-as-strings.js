@@ -124,3 +124,5 @@ function multiply(a, b)
 return  BigNumber(a).multiply(b).number.reverse().join('').replace(/^0*/g, '') || '0';
 
 }
+
+module.exports = {BigNumber}
