@@ -109,7 +109,7 @@ function howMatchMin(input, ch){
         if (digitZeroMinCount < digitOneMinCount) 
           digitOneMinCount = digitZeroMinCount;  
       
-      console.log('digitOneMinCount: '+digitOneMinCount);
+      //console.log('digitOneMinCount: '+digitOneMinCount);
       
           let codeM  = [
                      //dash, dot and space (Pause) between words 
