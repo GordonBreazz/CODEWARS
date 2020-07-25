@@ -11,7 +11,7 @@ describe("Simplifying multilinear polynomials tests. Test reduction by equivalen
     })
   
     test("#3", () => {
-      expect(simplify("2xy-yx").toEqual("xy")
+      expect(simplify("2xy-yx")).toEqual("xy")
     })
   
     test("#4", () => {
@@ -19,7 +19,7 @@ describe("Simplifying multilinear polynomials tests. Test reduction by equivalen
     })  
   })
 
-  describe("Simplifying multilinear polynomials tests. Test monomial length ordering:", function () {
+ describe("Simplifying multilinear polynomials tests. Test monomial length ordering:", function () {
     test("#1", () => {
       expect(simplify("-abc+3a+2ac")).toEqual("3a+2ac-abc")
     })
@@ -27,4 +27,24 @@ describe("Simplifying multilinear polynomials tests. Test reduction by equivalen
     test("#2", () => {
       expect(simplify("xyz-xz")).toEqual("-xz+xyz")
     })
-  })  
+ })  
+
+ describe("Simplifying multilinear polynomials tests. Test lexicographic ordering:", function () {
+    test("#1", () => {
+      expect(simplify("a+ca-ab")).toEqual("a-ab+ac")
+    })
+  
+    test("#2", () => {
+      expect(simplify("xzy+zby")).toEqual("byz+xyz")
+    })
+  })
+
+  describe("Simplifying multilinear polynomials tests. Test no leading +", function () {
+    test("#1", () => {
+      expect(simplify("-y+x")).toEqual("x-y")
+    })
+  
+    test("#2", () => {
+      expect(simplify("y-x")).toEqual("-x+y")
+    })
+  })
