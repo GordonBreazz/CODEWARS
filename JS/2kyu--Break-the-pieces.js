@@ -5,7 +5,7 @@
 *   SOURCE: https://www.codewars.com/kata/527fde8d24b9309d9b000c4e
 *   AUTHOR: https://www.codewars.com/users/GordonBreazz
 * 
-*     PLOT: You are given a ASCII diagram , comprised of minus signs -, plus signs +, vertical bars | and whitespaces . 
+*     PLOT: You are given a ASCII diagram , comprised of minus signs -, plus signs +, vertical bars | and whitespaces. 
 *           Your task is to write a function which breaks the diagram in the minimal pieces it is made of.
 *
 *   For example, if the input for your function is this diagram:
