@@ -11,10 +11,10 @@
 
 export class Kata {
     static disemvowel(str: string) {
-      let arr: string[] = ['A', 'E', 'I', 'O', 'U']
+      const vowels = ['A', 'E', 'I', 'O', 'U']
       let st: string = ''
-      for (let i: number = 0; i < str.length; i++)
-        if (arr.every((ch) => ch != str[i].toUpperCase()))
+      for (let i = 0; i < str.length; i++)
+        if ( !vowels.some((ch) => ch == str[i].toUpperCase()) )
           st += str[i]
       return st
     }
