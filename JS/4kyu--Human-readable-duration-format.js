@@ -54,8 +54,7 @@ function formatDuration (seconds) {
   let dayInSec = hoursInSec*24;
   let yearInSec = dayInSec*365;
 
-  let y = div(seconds, yearInSec);  
-  
+  let y = div(seconds, yearInSec);    
   if (y > 0) seconds = seconds % yearInSec;
   
   let d = div(seconds, dayInSec);  
