@@ -13,6 +13,6 @@
 **************************************************************************************************************************************************************************************/
 
 export function solution(str: string, ending: string): boolean {
-    if (ending == '') return true  
+    if (!ending) return true  
     return  (str.length - ending.length == str.indexOf(ending))
   }
