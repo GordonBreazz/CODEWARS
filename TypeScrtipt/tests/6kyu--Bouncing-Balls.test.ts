@@ -1,4 +1,4 @@
-const { Kata } = require("../6kyu--Bouncing-Balls.test.ts")
+const { bouncingBall } = require("../6kyu--Bouncing-Balls.test.ts")
 
 describe('"Bouncing Balls" tests:', function () {
     test("#1", () => {

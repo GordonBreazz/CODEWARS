@@ -1,4 +1,4 @@
-const { Kata } = require("../7kyu--Disemvowel-Trolls.ts")
+const { fakeBin } = require("../7kyu--Disemvowel-Trolls.ts")
 
 describe("Fake Binary tests:", function () {
     test("#1", () => {
