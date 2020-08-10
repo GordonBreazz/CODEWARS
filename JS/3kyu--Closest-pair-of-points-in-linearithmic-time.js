@@ -1,8 +1,8 @@
 /***************************************************************************************************************************************************************************************************************************************
 * 
-*     KATA: 2 kyu "Break the pieces" 
+*     KATA: 3 kyu "Closest pair of points in linearithmic time"
 *
-*   SOURCE: https://www.codewars.com/kata/527fde8d24b9309d9b000c4e
+*   SOURCE: https://www.codewars.com/kata/5376b901424ed4f8c20002b7
 *   AUTHOR: https://www.codewars.com/users/GordonBreazz
 * 
 *     PLOT: Given a number of points on a plane, your task is to find two points with the smallest distance between 
