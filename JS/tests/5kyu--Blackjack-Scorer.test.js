@@ -1,4 +1,4 @@
-const { scoreHand } = require("../5kyu--Blackjack-Scorer.test")
+const { scoreHand } = require("../5kyu--Blackjack-Scorer.js")
 
 describe('"Blackjack Scorer" kata tests:', function () {
     test("#1", () => {
