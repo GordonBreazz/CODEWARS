@@ -1,4 +1,4 @@
-const { domainName } = require("../4kyu--Permutations.js")
+const { domainName } = require("../5kyu--Extract-the-domain-name-from-a-URL.js")
 
 describe('"Extract the domain name from a URL:', function () {
     test("#1", () => {
@@ -10,7 +10,7 @@ describe('"Extract the domain name from a URL:', function () {
     })
 
     test("#1", () => {
-      expect((domainName("www.xakep.ru")).toEqual('xakep')
+      expect(domainName("www.xakep.ru")).toEqual('xakep')
     })
 
     test("#1", () => {
