@@ -1,4 +1,4 @@
-const { solution } = require("../7kyu--String-ends-with.js")
+const { solution } = require("../7kyu--String-ends-with.ts")
 
 describe('"String ends with?" tests:', function () {
   test("#1", () => {

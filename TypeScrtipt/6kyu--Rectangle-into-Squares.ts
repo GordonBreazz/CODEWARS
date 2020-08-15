@@ -33,7 +33,9 @@
  *             (C)
  *             C returns a structure, see the "Solution" and "Examples" tabs.
  *             Your result and the reference test solution are compared by strings.
+ * 
  *           Notes:
+ * 
  *           lng == wdth as a starting case would be an entirely different problem and the drawing is planned to be interpreted with lng != wdth. (See kata, Square into Squares. Protect trees! http://www.codewars.com/kata/54eb33e5bc1a25440d000891 for this problem).
  *
  *           When the initial parameters are so that lng == wdth, the solution [lng] would be the most obvious but not in the spirit of this kata so, in that case, return None/nil/null/Nothing
