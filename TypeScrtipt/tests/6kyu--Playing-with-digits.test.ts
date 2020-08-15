@@ -5,11 +5,11 @@ describe('"Playing with digits" tests:', function () {
       expect(G964.digPow(89, 1)).toEqual(1)
     })
 
-    test("#1", () => {
+    test("#2", () => {
       expect(G964.digPow(92, 1)).toEqual(-1)
     })
 
-    test("#1", () => {
+    test("#3", () => {
       expect(G964.digPow(114, 3)).toEqual(9)
     })    
 })
