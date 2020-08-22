@@ -64,6 +64,7 @@ function factoradic(number){
   return result
 }
 
+// function takes a string and positions number(n) and returns the nth lexicographic permutaion of string
 function permutation(string, n){
   let letters = string.split('').sort()
   let positions = factoradic(n)  
@@ -80,7 +81,7 @@ function permutation(string, n){
 }
 
 function middlePermutation(s) {
-  // This list contains precalculate values by "fact(i) / 2 - 1". Where fact(I) is the factorial of the number I  
+ // This list contains precalculate values from expression: "fact(i) / 2 - 1". Where fact(I) is the factorial of the number I  
   const factTable =  ['-1',
                       '-1',
                       '0' ,
