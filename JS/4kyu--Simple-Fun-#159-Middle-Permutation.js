@@ -56,7 +56,7 @@ function factoradic(number){
   let result = []
   let i = 1
   n = String(number)
-  while (n != '0'){    
+  while (n != '0') {    
     result.unshift(calculateMod(n, i))    
     n = calculateDiv(n, i)
     i++
