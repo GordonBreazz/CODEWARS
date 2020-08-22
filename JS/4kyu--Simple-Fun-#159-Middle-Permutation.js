@@ -20,7 +20,7 @@
  *
  ***********************************************************************************************************************************************************/
 
- // function calculateDiv() implements an integer division of large numbers.
+ // function implements an integer division of large numbers.
 function calculateDiv(string, d) {
     let num = string,
     numLength = num.length,
@@ -40,7 +40,7 @@ function calculateDiv(string, d) {
     return answer
 }
 
-// function calculateMod() implements the remainder of the division of large integer numbers.
+// function implements the remainder of the division of large integer numbers.
 function calculateMod(string, mod) {
   let str = string  
   var n = str.length;
