@@ -1,8 +1,8 @@
 ############################################################################################################################################################################################################################################
 #
-#      KATA: 6 kyu "Highest Scoring Word"
+#      KATA: 4 kyu "Simple Fun #159: Middle Permutation"
 #
-#    SOURCE: https://www.codewars.com/kata/57eb8fcdf670e99d9b00027
+#    SOURCE: https://www.codewars.com/kata/58ad317d1541651a740000c5
 #    AUTHOR: https://www.codewars.com/users/GordonBreazz
 #
 #      PLOT: You are given a string s. Every letter in s appears once.#            
