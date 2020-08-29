@@ -2,7 +2,7 @@
 * 
 *     KATA: 5 kyu "Valid Parentheses"
 *
-*   SOURCE: https://www.codewars.com/kata/5235c913397cbf2508000048
+*   SOURCE: https://www.codewars.com/kata/52774a314c2333f0a7000688
 *   AUTHOR: https://www.codewars.com/users/GordonBreazz
 * 
 *     PLOT: Write a function called that takes a string of parentheses, and determines if 
