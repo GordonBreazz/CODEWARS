@@ -20,16 +20,16 @@
 function degree(p) {   
     let xs = [], ys = [], degree = 0
     for (let x = -11; x <= 11; x++){
-      xs.push(x)
+    //  xs.push(x)
       ys.push(p(x))
     }
  
     while (!ys.every(v => v === ys[0])) {
+      console.log(ys)
       ys = ys.map((v, i) => v - ys[i - 1]).filter(v => v === v)
       degree++
     }
- 
+    console.log(ys)
     return degree
   }
-
   module.exports = { degree }
