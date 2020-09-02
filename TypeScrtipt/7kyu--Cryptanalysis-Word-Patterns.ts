@@ -15,16 +15,7 @@
 export function wordPattern(word: string): string {
   let dic: string[] = []
   let i: number = 0
-  let arr = word.toLowerCase().split('')
-  arr.forEach(
-    function(item) {
-      console.log(item.charCodeAt(0)-96)
-      if (!dic[item.charCodeAt(0)-96]) {
-        dic[item.charCodeAt(0)-96] = String(i)
-        i++        
-      }  
-    } 
- )
-  
-  return arr.map( item => dic[item.charCodeAt(0)-96] ).join('.') 
+  let result = word.toLowerCase().split('')
+  result.forEach( item => !dic[item.charCodeAt(0)-96] ? dic[item.charCodeAt(0)-96] = String(i++): false )  
+  return result.map( item => dic[item.charCodeAt(0)-96] ).join('.') 
 }
