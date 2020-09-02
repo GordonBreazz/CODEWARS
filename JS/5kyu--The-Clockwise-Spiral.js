@@ -39,7 +39,7 @@ function createSpiral(N) {
 
     if (N == 0 || !Number.isInteger(N) ) return []
     
-    let arr = new Array(N).fill(0).map( item => new Array(N).fill(0) ); //create matrix array
+    let arr = new Array(N).fill(0).map( item => new Array(N).fill(0) ) //create matrix array
       
     let dirs = [{dx: 1, dy: 0, dl: 0},
                 {dx: 0, dy: 1, dl: 0},
@@ -55,22 +55,22 @@ function createSpiral(N) {
       maxLen: N,
       
       changeDirection: function(){
-        this.len = 1
-        this.direction++
-        if ( this.direction > 3 ) {
-          this.direction = 0
-          dirs[1].dl = 1
-        }  
-        this.maxLen = this.maxLen - dirs[this.direction].dl    
-        return this.direction
+          this.len = 1
+          this.direction++
+          if ( this.direction > 3 ) {
+              this.direction = 0
+              dirs[1].dl = 1
+          }
+          this.maxLen = this.maxLen - dirs[this.direction].dl    
+          return this.direction
       },
       
       step: function(){
-        this.len++;
-        this.x = this.x + dirs[this.direction].dx;
-        this.y = this.y + dirs[this.direction].dy;
-        if (this.len >= this.maxLen) this.changeDirection();
-        return this.count++;
+          this.len++
+          this.x = this.x + dirs[this.direction].dx
+          this.y = this.y + dirs[this.direction].dy
+          if (this.len >= this.maxLen) this.changeDirection()
+          return this.count++
       }
     }
     
@@ -79,7 +79,6 @@ function createSpiral(N) {
     while (point.count <= N*N);
     
     return arr 
-    
-    }
+}
 
-    module.exports = { createSpiral }
+module.exports = { createSpiral }
