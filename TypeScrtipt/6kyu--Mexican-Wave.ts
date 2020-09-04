@@ -41,4 +41,4 @@ export function wave(str: string): Array<string>{
         sample[i] = sample[i].toLowerCase()
       }  
     return result
-  }
+  }v  

@@ -29,7 +29,6 @@ def evaluate( string):
     string += '+0'
     arr = string.split("+")
     arr = list(map(map_item, arr))
-    print('QQQQ',sum(arr))
     return 0
    
 evaluate("2 / 2 + 3 * 4 - 6")
