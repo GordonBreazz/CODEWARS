@@ -5,13 +5,13 @@ describe('"Beeramid" tests:', function () {
       expect(beeramid(9, 2)).toEqual(1)
     })
     test("#2", () => {
-      expect(beeramid(9, 2)).toEqual(2)
-    })
-    test("#3", () => {
       expect(beeramid(10, 2)).toEqual(2)
     })
+    test("#3", () => {
+      expect(beeramid(11, 2)).toEqual(2)
+    })
     test("#4", () => {
-      expect(beeramid(11, 2)).toEqual(3)
+      expect(beeramid(21, 1.5)).toEqual(3)
     })
     test("#5", () => {
       expect(beeramid(454, 5)).toEqual(5)
