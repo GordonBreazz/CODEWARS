@@ -144,7 +144,7 @@ def break_pieces(shape):
     for item in a:
         if len(item) +2 >maxr:
             maxr = len(item) + 2
-            pass#row = [0,...item.split('').map((i) => i != ' ' ? 2 : 0 ), 0]
+            row = map(lambda i: 2 if i != ' ' else 0, [x for x in item])
             if len(row) < maxr:
                 pass#row = [...row, ...Array(maxr - row.length).fill(0)]
             arr.append(row)
