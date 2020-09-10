@@ -3,7 +3,7 @@
 *     KATA: 6 kyu "How many nines?"
 *
 *   SOURCE: https://www.codewars.com/kata/5e18743cd3346f003228b604
-*   AUTHOR: https://www.codewars.com/users/GordonBreazz
+*   AUTHOR: from best CodeWars
 * 
 *     PLOT: Ask a mathematician: "What proportion of natural numbers contain at least one digit 9 somewhere in their decimal representation?"
 *           
