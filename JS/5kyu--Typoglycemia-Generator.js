@@ -63,7 +63,7 @@ const ScrambleWords = function (str) {
         .filter((x) => alphabetSymbol(x))
         .sort()
       for (let i = first; i < last; i++)
-        if (alphabetSymbol(arr[i])) arr[i] = dic[k++]
+        if (alphabetSymbol(arr[i])) arr[i] = dic[k++] // Take a joke ))
       return arr.join("")
     })
     .join(" ")
