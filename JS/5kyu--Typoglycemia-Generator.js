@@ -53,18 +53,17 @@ const ScrambleWords = function (str) {
         }
       for (let i = arr.length - 1; i >= 0; i--)
         if (alphabetSymbol(arr[i])) {
-          last = i - 1
+          last = i
           break
         }
 
       let dic = item
-        .slice(first, last + 1)
+        .slice(first, last)
         .split("")
         .filter((x) => alphabetSymbol(x))
         .sort()
-      for (let i = first; i <= last; i++)
-        if (alphabetSymbol(arr[i])) 
-          arr[i] = dic[k++]                
+      for (let i = first; i < last; i++)
+        if (alphabetSymbol(arr[i])) arr[i] = dic[k++]
       return arr.join("")
     })
     .join(" ")
