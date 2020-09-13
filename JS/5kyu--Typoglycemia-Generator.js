@@ -62,11 +62,11 @@ const ScrambleWords = function (str) {
         .split("")
         .filter((x) => alphabetSymbol(x))
         .sort()
-      for (let i = first; i < last; i++)
+        for (let i = first; i < last; i++)
         if (alphabetSymbol(arr[i])) arr[i] = dic[k++] // Take a joke ))
-      return arr.join("")
-    })
-    .join(" ")
-}
-
-module.exports = { ScrambleWords }
+        return arr.join("")
+      })
+      .join(" ")
+    }
+    
+    module.exports = { ScrambleWords }
