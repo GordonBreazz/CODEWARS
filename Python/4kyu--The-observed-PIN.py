@@ -50,6 +50,5 @@ def get_pins(observed):
     digits = []
     result = []
     for ch in observed:
-        digits.append(dic[int(ch)])
-         
+        digits.append(dic[int(ch)])         
     return around('', digits, result)
