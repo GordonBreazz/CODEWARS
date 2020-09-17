@@ -32,7 +32,7 @@
 *            
 *            Detective, we are counting on you!
 *            
-*            For C* user: Do not use Mono. Mono is too slower when run your code.
+*            For C# user: Do not use Mono. Mono is too slower when run your code.
 *
 ***************************************************************************************************************************************************************************************************************************************/
 
