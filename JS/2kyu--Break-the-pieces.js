@@ -5,6 +5,7 @@
 *   SOURCE: https://www.codewars.com/kata/527fde8d24b9309d9b000c4e
 *   AUTHOR: https://www.codewars.com/users/GordonBreazz
 * 
+* 
 *     PLOT: You are given a ASCII diagram , comprised of minus signs -, plus signs +, vertical bars | and whitespaces. 
 *           Your task is to write a function which breaks the diagram in the minimal pieces it is made of.
 *
@@ -141,7 +142,7 @@ function render(arr,x,y) {
 
 function extract(arr, count){
   let result = []
-  let tmp = arr.map(function (j) {
+  let tmp = arr.map(function (j) {                      
                       let a = j.map(i => i == count ? 5 : 0)
                       if (!a.every(item => item==0)) 
                         return a                      
@@ -174,7 +175,6 @@ function extract(arr, count){
   return result
 }
 
-
 function find(arr, n, sx=0, sy=0){
   const my = arr.length
   const mx = arr[0].length
@@ -183,6 +183,7 @@ function find(arr, n, sx=0, sy=0){
       if (arr[j][i] == n) return {x:i,y:j, result: true}
   return {x:-1,y:-1, result: false}   
 }
+
 function fill(arr, x, y, n, p){
   const my = arr.length
   const mx = arr[0].length

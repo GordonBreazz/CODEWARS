@@ -85,26 +85,26 @@ def aroundMap(arr, x, y, value):
 
 def render(arr, x, y):
     st = aroundMap(arr, x, y, 0)
-    if st == '00000000':
-        return ' '
-    if st[0] == '1' and st[2]=='1' and st[5] == '1':
-        return '+'
-    if st[1] == '1' and st[3]=='1' and st[4] == '1':
-        return '+'
-    if st[0] == '1' and st[3]=='1' and st[6] == '1':
-        return '+'
-    if st[0] == '1' or st[1] == '1':
-        return '|'
-    if st[2] == '1' or st[3] == '1':
-        return '-'
-    if st == '00000001' or st == '00000010' or st == '00000100' or st == '00001000' or st=='01011000':
-        return '+'
+    if st == '00000000': return ' '
+    if st[0] == '1' and st[2]=='1' and st[5] == '1': return '+'
+    if st[1] == '1' and st[3]=='1' and st[4] == '1': return '+'
+    if st[0] == '1' and st[3]=='1' and st[6] == '1': return '+'
+    if st[0] == '1' or st[1] == '1': return '|'
+    if st[2] == '1' or st[3] == '1': return '-'
+    if st == '00000001' or st == '00000010' or st == '00000100' or st == '00001000' or st=='01011000': return '+'    
     return ' '
+
+def func(j):
+    a =  list(map(lambda i: 5 if i == count else 0, j))
+    if not all(list(map(lambda item:  item == 0 , a))): return a
+    return a
 
 def extract(arr, count):
     result = []
-        
+    tmp = map(func)
 
+
+        
 def find(arr, n, sx=0, sy=0):
     my = len(arr)
     mx = len(arr[0])
@@ -117,8 +117,7 @@ def find(arr, n, sx=0, sy=0):
 def fill(arr, x, y, n, p):
     my = len(arr)
     mx = len(arr[0])
-    if x < 0 or  y < 0 or y > my - 1 or x > mx - 1:
-        return -1
+    if x < 0 or  y < 0 or y > my - 1 or x > mx - 1: return -1
     if arr[y][x] == 0:
         arr[y][x] = n
     else:
@@ -142,11 +141,11 @@ def break_pieces(shape):
     row = []    
     maxr = 0
     for item in a:
-        if len(item) +2 >maxr:
+        if len(item) + 2 >maxr:
             maxr = len(item) + 2
             row = map(lambda i: 2 if i != ' ' else 0, [x for x in item])
             if len(row) < maxr:
-                pass#row = [...row, ...Array(maxr - row.length).fill(0)]
+                row = [*row, *[0 for i in range(maxr - row.length)]]
             arr.append(row)
             
     maxy = len(arr[0])
@@ -161,9 +160,8 @@ def break_pieces(shape):
         point = find(arr, 0)
         if point.result:
             fill(arr, point.x, point.y, count)
-            count += 1
-            
+            count += 1            
         if point.result:
             break
-    return ''#extractAll(arr, count)    
-    pass
+    return extractAll(arr, count)    
+    

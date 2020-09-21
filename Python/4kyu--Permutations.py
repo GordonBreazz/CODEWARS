@@ -28,8 +28,7 @@ def next_permutation(arr, compare):
         i -= 1
         if compare(arr[i-1], arr[i]): break
             
-    j = count
-    
+    j = count    
     while j > i and not compare(arr[i-1], arr[j-1]): j = j - 1
     
     swap_elem(arr, i - 1, j - 1)
