@@ -1,8 +1,8 @@
 /***************************************************************************************************************************************************************************************************************************************
 * 
-*     KATA: 2 kyu "Break the pieces" 
+*     KATA: 6 kyu "The Deaf Rats of Hamelin" 
 *
-*   SOURCE: https://www.codewars.com/kata/527fde8d24b9309d9b000c4e
+*   SOURCE: https://www.codewars.com/kata/598106cb34e205e074000031
 *   AUTHOR: https://www.codewars.com/users/GordonBreazz
 * 
 * 
