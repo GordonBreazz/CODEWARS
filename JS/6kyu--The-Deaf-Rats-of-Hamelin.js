@@ -24,32 +24,44 @@
 ***************************************************************************************************************************************************************************************************************************************/
 
 
-let countDeafRats = function(town) {
-    // Your code here
+// let countDeafRats = function(town) {
+//     // Your code here
     
-    function rightDirection(st) {
-      let count = 0
-      for (let i=0; i<st.length; i+=2){
-        if (st[i] === 'O') count++ 
-      }  
-      return count 
-    }
+//     function rightDirection(st) {
+//       let count = 0
+//       for (let i=0; i<st.length; i+=2){
+//         if (st[i] === 'O') count++ 
+//       }  
+//       return count 
+//     }
     
-    function leftDirection(st) {
-      let count = 0
-      for (let i=st.length-1; i>-1; i-=2){
-        if (st[i] === 'O') count++ 
-      }  
-      return count 
-    }
+//     function leftDirection(st) {
+//       let count = 0
+//       for (let i=st.length-1; i>-1; i-=2){
+//         if (st[i] === 'O') count++ 
+//       }  
+//       return count 
+//     }
     
-    let flows = town.replace(/ /g, '').split('P')
-      console.log(flows)
+//     let flows = town.replace(/ /g, '').split('P')
+//       console.log(flows)
     
-    if (flows[1] == '') return rightDirection(flows[0])
-    if (flows[0] == '') return leftDirection(flows[1])
+//     if (flows[1] == '') return rightDirection(flows[0])
+//     if (flows[0] == '') return leftDirection(flows[1])
     
-    return  rightDirection(flows[0]) + leftDirection(flows[1]);
+//     return  rightDirection(flows[0]) + leftDirection(flows[1]);
+//   }
+
+  let countDeafRats = function(town) {
+  // Your code here
+    let sign = 'O', i = 0, result = 0
+    for (let ch of town) {
+      if (ch == ' ') continue
+      if (ch == 'P') sign = '~', i = 0
+        else
+          if ( ++i % 2 != 0 && ch == sign) result++          
+    }         
+    return result
   }
 
   module.exports = { countDeafRats }
