@@ -18,8 +18,8 @@
 
 package kata
 
+// your code here
 func Pyramid(n int) [][]int {
-	// your code here]
 	if n == 0 {
 		return [][]int{}
 	}
