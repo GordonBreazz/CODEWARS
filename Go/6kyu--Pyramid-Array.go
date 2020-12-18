@@ -18,7 +18,7 @@
 
 package kata
 
-// your code here
+// Pyramid is the function for solve problem
 func Pyramid(n int) [][]int {
 	if n == 0 {
 		return [][]int{}
