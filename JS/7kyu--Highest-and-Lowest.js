@@ -38,3 +38,5 @@ function highAndLow(numbers){
   
    return maxInt + ' ' + minInt;
   }
+
+  module.exports = { highAndLow }
