@@ -18,7 +18,7 @@
 
 function getLengthOfMissingArray(arrayOfArrays) {
     const arr = arrayOfArrays
-      .map((item) => item.length)
+      .map((item) => item ? item.length : 0)
       .sort((a, b) => Number(a) - Number(b))
     if (!arr[0]) return 0
     for (let i = 1; i < arr.length; i++)
