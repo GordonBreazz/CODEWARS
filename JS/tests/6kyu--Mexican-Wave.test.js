@@ -1,4 +1,4 @@
-const { wave } = require("../6kyu--Mexican-Wave.test.js")
+const { wave } = require("../6kyu--Mexican-Wave.js")
 
 describe('Tests for "Mexican Wave" kata:', function () {
     test("#1", () => {
@@ -11,7 +11,7 @@ describe('Tests for "Mexican Wave" kata:', function () {
         expect(wave("two words")).toEqual(["Two words", "tWo words", "twO words", "two Words", "two wOrds", "two woRds", "two worDs", "two wordS"])
     })
     test("#4", () => {
-        expect(wave("gap")).toEqual([" Gap ", " gAp ", " gaP "])
+        expect(wave(" gap ")).toEqual([" Gap ", " gAp ", " gaP "])
     })
 
   }
