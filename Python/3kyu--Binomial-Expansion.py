@@ -36,7 +36,7 @@ def to_x(st):
         if not i in '-0123456789': result += i
     if result == '': result = '@'
     return result
-
+    
 def to_int(st):
     result = ''
     for i in st:
@@ -63,55 +63,47 @@ def newton(a, b, n):
     result = []
     for i in range(n+1):
         tmp = []
-        if coefficients[i] > 1: tmp.append({'value': coefficients[i], 'degree': 1, 'x': '@'})
-        #coefficient = {'value': str(coefficients[i]), 'degree': 1}
+        if coefficients[i] > 1: tmp.append({'value': coefficients[i], 'degree': 1, 'x': '@'})        
         if (n - i) > 0:
             tmp.append({'value': to_int(a), 'degree': (n - i), 'x': to_x(a)})
             if tmp[-1]['x'] != '@':
                 c = tmp[-1]['x']
                 tmp[-1]['x'] = '@'
-                tmp.append({'value': 1, 'degree': (n - i), 'x': c})
-        #ap = {'value': a, 'degree': (n - i)}
+                tmp.append({'value': 1, 'degree': (n - i), 'x': c})        
         if i > 0:
             tmp.append({'value': to_int(b), 'degree': i, 'x': to_x(b)})
             if tmp[-1]['x'] != '@':
                 c = tmp[-1]['x']
                 tmp[-1]['x'] = '@'
-                tmp.append({'value': 1, 'degree': i, 'x': c})
-        #bp = {'value': b, 'degree': i}
+                tmp.append({'value': 1, 'degree': i, 'x': c})        
         result += [tmp]
 
     return result
 
-def expand1(expr):
+def expand(expr):
     st, n = expr.split('^')
     if int(n) == 0: return '1'
-    if int(n) == 1: return st
+    if int(n) == 1: return st[1:-1]
     st = st[1:-1].replace('-','+-').split('+')
-    a, b = tuple(filter(lambda x: x!='', st))
-    # print('result', newton(a, b, int(n)))
-    # return list(filter(lambda x: x!='', arr))
+    a, b = tuple(filter(lambda x: x != '', st))
     arr = newton(a, b, int(n))
     result = []
     for items in arr:
         mul = 1
-        res = []
+        res = ''
         for item in items:
             if item['x'] == '@':
                 mul *= item['value'] ** item['degree']
             else:
-               if item['degree'] > 1:
-                   res.append(item['x'] + '^' + str(item['degree']))
-               else:
-                   res.append(item['x'])
-        #print(res)
-        if mul > 1:
-            result.append(str(mul) + '*'.join(res))
+                if item['degree'] > 1:
+                    res += item['x'] + '^' + str(item['degree'])
+                else:
+                    res += item['x']        
+        if mul == 1 and len(res) != 0:
+            result.append(res)            
+        elif mul == -1 and len(res) != 0:
+            result.append('-' + res)            
         else:
-            result.append('*'.join(res))
-        #print(result)
-    return '+'.join(result)
-def expand(arg):
-    print('')
-    print('input:', arg)
-    return expand1(arg)
+            result.append(str(mul) + res)
+
+    return '+'.join(result).replace('+-', '-')
