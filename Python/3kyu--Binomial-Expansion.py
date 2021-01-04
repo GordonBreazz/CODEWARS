@@ -30,13 +30,21 @@
 #
 ########################################################################################################################################################################################################################################
 
+def to_pw(a, x, n):
+    coof = ''
+    if a != 1:
+        coof = str(a ** int(n))
+        if coof == '-1': coof = '-'
+        if coof == '1': coof = ''
+    return coof + x + '^' + n
+
 def to_x(st):
     result = ''
     for i in st:
         if not i in '-0123456789': result += i
     if result == '': result = '@'
     return result
-    
+
 def to_int(st):
     result = ''
     for i in st:
@@ -85,7 +93,18 @@ def expand(expr):
     if int(n) == 0: return '1'
     if int(n) == 1: return st[1:-1]
     st = st[1:-1].replace('-','+-').split('+')
-    a, b = tuple(filter(lambda x: x != '', st))
+    a, b = tuple(filter(lambda x: x!='', st))
+    
+    if to_int(a) == 0 and to_int(b) == 0:
+        return "0"
+    
+    v_a = to_int(a)
+    v_b = to_int(b)
+
+    if v_a == 0 and v_b == 0: return "0"
+    if v_b == 0: return to_pw(v_a, to_x(a), n)
+    if v_a == 0: return to_pw(v_b, to_x(b), n)    
+    
     arr = newton(a, b, int(n))
     result = []
     for items in arr:
