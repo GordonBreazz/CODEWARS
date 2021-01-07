@@ -1,8 +1,8 @@
 def run(x, y, angle, steps):
     dx = 0
     dy = 0
-    if angle == 0 or angle == 360: dx = 1
-    if angle == 180: dx = -1
+    if angle == 0 or angle == 360: dx = -1
+    if angle == 180: dx = 1
     if angle == 90: dy = 1
     if angle == 270: dy = -1        
     for i in range(steps):
@@ -37,19 +37,21 @@ def i_am_here(path):
     print(commands)
     for cmd in commands:
         if cmd == 'L': 
-            angle = 0
-            print('после поворота L', angle) 
+            angle -= 180
+            if angle < 0: angle = 360 + angle
+            print('после поворота ', cmd, angle) 
         elif cmd == 'R': 
-            angle = 180
-            print('после поворота R' , angle) 
-        elif cmd == 'l': 
+            angle += 180
+            if angle >= 360: angle = 360 - angle
+            print('после поворота ' , cmd, angle) 
+        elif cmd == 'r': 
             angle += 90
             if angle >= 360: angle = 360 - angle
-            print('после поворота r', angle)    
-        elif cmd == 'r': 
+            print('после поворота ', cmd, angle)    
+        elif cmd == 'l': 
             angle -= 90
             if angle < 0: angle = 360 + angle
-            print('после поворота l', angle)     
+            print('после поворота ', cmd, angle)     
         else: 
             print('выполнить столько то шагов', cmd)
             x, y = run(x, y, angle, cmd)
