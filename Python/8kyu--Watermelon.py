@@ -2,7 +2,7 @@
 # 
 #     KATA: 8 kyu "Watermelon"
 #
-#   SOURCE: https://www.codewars.com/kata/540d0fdd3b6532e5c3000b5b
+#   SOURCE: https://www.codewars.com/kata/watermelon
 #   AUTHOR: https://www.codewars.com/users/GordonBreazz
 # 
 #     PLOT: It's too hot, and they can't even…
