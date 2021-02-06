@@ -1,10 +1,19 @@
-# Write a function which makes a list of strings representing all of the ways you can balance n pairs of parentheses
-
-# Examples
-# balanced_parens(0) => [""]
-# balanced_parens(1) => ["()"]
-# balanced_parens(2) => ["()()","(())"]
-# balanced_parens(3) => ["()()()","(())()","()(())","(()())","((()))"]
+#######################################################################################################################################################################################################################################
+# 
+#     KATA: 4 kyu "All Balanced Parentheses"
+#
+#   SOURCE: https://www.codewars.com/kata/5426d7a2c2c7784365000783
+#   AUTHOR: https://www.codewars.com/users/GordonBreazz
+# 
+#     PLOT: Write a function which makes a list of strings representing all of the ways you can balance n pairs of parentheses
+#
+#           Examples
+#             balanced_parens(0) => [""]
+#             balanced_parens(1) => ["()"]
+#             balanced_parens(2) => ["()()","(())"]
+#             balanced_parens(3) => ["()()()","(())()","()(())","(()())","((()))"]
+#
+########################################################################################################################################################################################################################################
 
 def findParentheses(str, pos, n, open, close, result):    
     if(close == n): 
