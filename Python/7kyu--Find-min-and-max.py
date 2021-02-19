@@ -1,9 +1,15 @@
-# Implement a function that returns the minimal and the maximal value of a list (in this order).
+#######################################################################################################################################################################################################################################
+# 
+#     KATA: 7 kyu "Find min and max"
+#
+#   SOURCE: https://www.codewars.com/kata/57a1ae8c7cb1f31e4e000130
+#   AUTHOR: https://www.codewars.com/users/GordonBreazz
+# 
+#     PLOT: Implement a function that returns the minimal and the maximal value of a list (in this order).
+#     
+########################################################################################################################################################################################################################################
 
 def get_min_max(seq): 
     # your code here
-    seq.sort() 
-    l = len(seq)
-    if l == 1:
-      return (1, 1)
-    return (seq[0], seq[len(seq)-1])
+    seq.sort()
+    return (seq[0], seq[-1])
