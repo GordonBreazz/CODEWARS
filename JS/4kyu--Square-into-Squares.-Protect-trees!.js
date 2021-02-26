@@ -37,14 +37,13 @@ function decompose(n) {
   while (result.length > 0) {
     let cur = result.pop()
     g += cur ** 2
-    for (let i = cur - 1; i >= 0; i--) {
+    for (let i = cur - 1; i >= 0; i--) 
       if (g - i ** 2 >= 0) {
         g -= i ** 2
         result.push(i)
         if (g == 0) 
           return result.sort((a, b) => a - b)                  
-      }
-    }
+      }    
   }
   return null
 }
