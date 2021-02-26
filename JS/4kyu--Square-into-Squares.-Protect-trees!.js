@@ -35,7 +35,7 @@ function decompose(n) {
   let g = 0
   let result = [n]
   while (result.length > 0) {
-    cur = result.pop()
+    let cur = result.pop()
     g += cur ** 2
     for (let i = cur - 1; i >= 0; i--) {
       if (g - i ** 2 >= 0) {
