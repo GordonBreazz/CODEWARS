@@ -1,12 +1,47 @@
+/***************************************************************************************************************************************************************************************************************************************
+* 
+*     KATA: 7 kyu "Alphabet war"
+*
+*   SOURCE: https://www.codewars.com/kata/59377c53e66267c8f6000027
+*   AUTHOR: https://www.codewars.com/users/GordonBreazz
+* 
+*     PLOT: There is a war and nobody knows - the alphabet war! 
+*           There are two groups of hostile letters. The tension between left side letters and right side letters 
+*           was too high and the war began.
+*
+*           Task
+*           Write a function that accepts fight string consists of only small letters and return who wins the fight. When the left side wins return Left side wins!, when the right side wins return Right side wins!, in other case return Let's fight again!.
+*           
+*           The left side letters and their power:*          
+*             w - 4
+*             p - 3
+*             b - 2
+*             s - 1
+*
+*           The right side letters and their power:*           
+*             m - 4
+*             q - 3
+*             d - 2
+*             z - 1
+*
+*           The other letters don't have power and are only victims.
+*           
+*           Example
+*             alphabetWar("z");        //=> Right side wins!
+*             alphabetWar("zdqmwpbs"); //=> Let's fight again!
+*             alphabetWar("zzzzs");    //=> Right side wins!
+*             alphabetWar("wwwwwwz");  //=> Left side wins!
+*                    
+****************************************************************************************************************************************************************************************************************************************/
+
 function alphabetWar(fight) {
-    let lleft = {'w':4, 'p':3, 'b': 2, 's': 1}
-    let lright = {'m':4, 'q':3, 'd': 2, 'z': 1}
-    let sleft = 0, sright = 0
-    for (let item of fight) {
-      if (lleft[item]) sleft += lleft[item]
-      if (lright[item]) sright += lright[item]
-    }
-    if (sleft > sright) return 'Left side wins!'    
-    if (sleft < sright) return 'Right side wins!'
+    let letters = {'w':4, 'p':3, 'b': 2, 's': 1, 'm':-4, 'q':-3, 'd': -2, 'z': -1}
+    let sum = 0
+    for (let item of fight) 
+      sum += letters[item] || 0
+    if (sum > 0) return 'Left side wins!'    
+    if (sum < 0) return 'Right side wins!'
     return "Let's fight again!";
  }
+
+ module.exports = {alphabetWar}
