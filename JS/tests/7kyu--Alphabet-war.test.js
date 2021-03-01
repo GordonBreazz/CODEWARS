@@ -1,7 +1,6 @@
 const { alphabetWar } = require("../7kyu--Alphabet-war.js")
 
 describe('"Alphabet war" tests:', function () {
-    // Should correctly expand binomials where a=1 and b is positive
     test("#1", () => {
       expect(alphabetWar("z")).toEqual("Right side wins!")
     })
