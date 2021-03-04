@@ -39,11 +39,9 @@ def alphabet_war(fight):
     letters = {'w': 4, 'p': 3, 'b': 2, 's': 1, 'm': -4, 'q': -3, 'd': -2, 'z': -1}
     sum = 0
     for ch in fight:
-                if letters[ch]:
-            sum += letters[ch]
+        try: sum += letters[ch]
+        except: pass                            
     result = "Let's fight again!"
-    if sum > 0: 
-        result = 'Left side wins!'
-    if sum < 0: 
-        result = 'Right side wins!'
+    if sum > 0: result = 'Left side wins!'
+    if sum < 0: result = 'Right side wins!'
     return result
