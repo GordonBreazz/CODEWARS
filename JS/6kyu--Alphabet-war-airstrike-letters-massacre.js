@@ -1,6 +1,6 @@
 /***************************************************************************************************************************************************************************************************************************************
 * 
-*     KATA: 7 kyu "Alphabet war - airstrike - letters massacre"
+*     KATA: 6 kyu "Alphabet war - airstrike - letters massacre"
 *
 *   SOURCE: https://www.codewars.com/kata/5938f5b606c3033f4700015a
 *   AUTHOR: https://www.codewars.com/users/GordonBreazz
