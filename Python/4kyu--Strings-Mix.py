@@ -70,7 +70,6 @@ def create_twins_list(dic1, dic2):
 def create_uniq_list(alphabet, dic, dif_dic, prefix):
     list = []
     prefix_name = str(prefix)+':'
-    order_list = -prefix
     for ch in alphabet:
         if ch in dic:
             v = dic[ch]
@@ -79,7 +78,7 @@ def create_uniq_list(alphabet, dic, dif_dic, prefix):
                 dif = dif_dic[ch]                
             if v > 1 and dif < v:
                 st = ch * v
-                list.append({'value': st, 'length': len(st), 'prefix': prefix_name, 'order': -ord(ch), 'order_list': order_list})
+                list.append({'value': st, 'length': len(st), 'prefix': prefix_name, 'order': -ord(ch), 'order_list': -prefix})
     return list
 
 def create_dic(alphabet, st):
@@ -113,6 +112,6 @@ def mix(s1, s2):
             result += item['prefix'] + item['value']
             fl = False
         else:
-             result += '/' + item['prefix'] + item['value']     
+            result += '/' + item['prefix'] + item['value']     
                 
     return result
