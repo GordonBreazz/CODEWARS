@@ -238,5 +238,6 @@ const breakPieces = function(shape) {
   return extractAll(arr, count)
 }
 
+
 // export for test
 module.exports = breakPieces
