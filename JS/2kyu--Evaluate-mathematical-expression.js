@@ -105,16 +105,16 @@ const calc = expression => {
         a = 0
     for ( let ch of  expression ) {
         if ( ch == ')' ) {
-        a -= 1
-        if ( a == 0 ) {
-            exprSt += String(calc(s1))
-            continue        
-        }      
+            a -= 1
+            if ( a == 0 ) {
+                exprSt += String(calc(s1))
+                continue        
+            }      
         }    
         s1 += ch    
         if ( ch == '(' ) {
-        if ( a == 0 ) s1 = ''
-        a += 1      
+            if ( a == 0 ) s1 = ''
+            a += 1      
         }    
         if (a == 0) exprSt += ch
     }
