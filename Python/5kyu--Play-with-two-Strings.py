@@ -42,14 +42,18 @@
 #
 #######################################################################################################################################################################################################################################
 
+def func(sample, st):   
+    for ch in sample:
+        tmp = ''
+        for i, item in enumerate(st):
+            if ch.lower() == item.lower():
+                if st[i].islower():
+                    tmp += st[i].upper()
+                else:
+                    tmp += st[i].lower()
+            else:
+                tmp += st[i]               
+        st = tmp
+    return st
 def work_on_strings(a,b):
-    A = set(a)
-    B = set(b)
-    C = A.intersection(B)
-    result = ""
-    for ch in a + b:
-        if ch in C:
-            result += ch.upper()
-        else:
-            result += ch
-    return result
+    return func(b,a) + func(a,b)
