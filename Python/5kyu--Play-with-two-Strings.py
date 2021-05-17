@@ -45,15 +45,9 @@
 def func(sample, st):   
     for ch in sample:
         tmp = ''
-        for i, item in enumerate(st):
-            if ch.lower() == item.lower():
-                if st[i].islower():
-                    tmp += st[i].upper()
-                else:
-                    tmp += st[i].lower()
-            else:
-                tmp += st[i]               
+        for item in st:
+            tmp += item.swapcase() if ch.lower() == item.lower() else item                      
         st = tmp
     return st
 def work_on_strings(a,b):
-    return func(b,a) + func(a,b)
+    return func(b, a) + func(a, b)
