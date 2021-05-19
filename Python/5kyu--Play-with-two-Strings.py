@@ -49,5 +49,6 @@ def func(sample, st):
             tmp += item.swapcase() if ch.lower() == item.lower() else item                      
         st = tmp
     return st
+    
 def work_on_strings(a,b):
     return func(b, a) + func(a, b)
