@@ -15,23 +15,6 @@
 #
 ########################################################################################################################################################################################################################################
 
-# def flip(d, a):
-#     # Do some magic
-#     result = []
-#     if d == "L" or d == "R":
-#         for arr in a:
-#             result.append(sorted(arr, reverse = (d == "L")))        
-#         return result
-    
-#     tmp = []
-#     for j in range(len(a[1])):
-#         tmp.append(sorted([a[i][j] for i in range(len(a))], reverse = (d == "U")))
-        
-#     for j in range(len(tmp[1])):
-#         result.append([tmp[i][j] for i in range(len(tmp))])
-    
-#     return result
-
 def flip(d, a):
     # Do some magic
     if d == "L" or d == "R":
