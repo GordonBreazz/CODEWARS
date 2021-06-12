@@ -13,7 +13,7 @@ npm test
 ```
 npm test <kata-name>.test.js.
 ```
-for example 
+### for example 
 ```
 npm test 2kyu--Break-the-pieces.test.js
 ```
