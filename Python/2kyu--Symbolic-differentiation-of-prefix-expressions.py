@@ -1,22 +1,36 @@
-def eva(st):
+expr_list = []
+    
+def eva_ex(st):
+    st = simplify(st)
     print('/////////////',st)
     arr = st.split(' ')
+    arr.reverse()
     fl = False
     ch = ''
     result = ''
-    for item in arr:        
-        if item in ['-', '+', '*', '/', '^']:
-            ch = item
-            fl = True
-            continue        
-        if fl:
-            result += item + ' ' + ch            
-            fl = False
-        else:
-            result += ' ' + item
-    print(arr, result)
-    return ''#'{' + result + '}'
+    #print(arr)
+    stack = []
+    for item in arr:
+        #print(stack, '#', result)
+        if not item in ['-', '+', '*', '/', '^']:
+            stack.append(item)
+            continue
+        a = stack.pop()
+        b = stack.pop()
+        stack.append(b + ' ' + item + ' ' + a)
+    result = stack.pop()
+   # print('result:', result) 
+    return result
 
+
+def simplify(st):
+    func_list = ['cos', 'sin', 'tan', 'exp', 'ln']
+    for func in func_list:
+        while True:
+            newst = st.replace(func + ' ', func + '_')
+            if newst == st: break
+            st = newst
+    return st
 def calc(expression):    
     expr_st = ''
     s1 = ''
@@ -35,9 +49,23 @@ def calc(expression):
 
         if a == 0:
             expr_st += ch
-    st = eva(expr_st)
-    return st  # evaluated expression
+    expr_list.append('(' + eva_ex(expr_st) + ')')
+    return '@'  # evaluated expression
 
 def diff(s):
-    print(calc('(* (+ x 3 * + 7 8) 5) '))
+    #print(simplify('sin x + 10 * cos (1+2)'))
+    global expr_list
+    expr_list = []
+    #print(calc('3 4 2 * 1 5 - 2 ^ / +'))
+    #print(calc('(* (+ x 3) 5)'))
+    #print(calc('(* 3 (* 2 x))'))
+    #print(calc('(^ (cos x) -2)'))
+    #print(calc(s))
+    #print(expr_list)
+    print(calc("5"))
+    pred = ''
+    while expr_list:        
+        pred = expr_list.pop(0).replace('@', pred)
+        #print(pred)
+    print('*****', pred[1:-1])
     pass
