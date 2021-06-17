@@ -8,10 +8,10 @@ def eva_ex(st):
     fl = False
     ch = ''
     result = ''
-    #print(arr)
+
     stack = []
     for item in arr:
-        #print(stack, '#', result)
+
         if not item in ['-', '+', '*', '/', '^']:
             stack.append(item)
             continue
@@ -19,7 +19,7 @@ def eva_ex(st):
         b = stack.pop()
         stack.append(b + ' ' + item + ' ' + a)
     result = stack.pop()
-   # print('result:', result) 
+
     return result
 
 
@@ -31,6 +31,7 @@ def simplify(st):
             if newst == st: break
             st = newst
     return st
+    
 def calc(expression):    
     expr_st = ''
     s1 = ''
