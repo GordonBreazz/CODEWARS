@@ -2,7 +2,7 @@ expr_list = []
     
 def eva_ex(st):
     st = simplify(st)
-    print('/////////////',st)
+   # print('/////////////',st)
     arr = st.split(' ')
     arr.reverse()
     fl = False
