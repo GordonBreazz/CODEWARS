@@ -52,6 +52,6 @@ function maxSum(arr,range){
       if (sum > maxSum) maxSum = sum
     }  
     return maxSum  
-  }
+}
 
   module.exports = {maxSum}
