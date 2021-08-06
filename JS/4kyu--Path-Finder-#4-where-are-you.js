@@ -27,12 +27,12 @@ const run = (x, y, angle, steps) => {
     return [x, y]
 }
 
+function IamHere(path) {  
 // @param string "path" is a set of actions. To solve the problem, you need to keep the current position and 
 // angle of rotation between functions call
 //
 // Values "l" and "r" - rotate left and right 90 degrees
-// Values "L" and "R" - turn left and right 180 degrees      
-function IamHere(path) {  
+// Values "L" and "R" - turn left and right 180 degrees        
     if (path === "") return [0, 0]
     
     let x = 0,
