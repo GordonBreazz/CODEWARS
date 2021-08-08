@@ -55,7 +55,6 @@ def path_finder(maze):
         print(item)
     return field[l - 2][l - 2]
 
-
 a = "\n".join([
   ".W.",
   ".W.",
