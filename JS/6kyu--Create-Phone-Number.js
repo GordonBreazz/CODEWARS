@@ -17,4 +17,4 @@
 
 const createPhoneNumber = number => (number = number.join(''), `(${number.slice(0,3)}) ${number.slice(3,6)}-${number.slice(6)}`)
 
-module.exports = {createPhoneNumber}
+module.exports = { createPhoneNumber }
