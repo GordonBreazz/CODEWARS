@@ -50,8 +50,7 @@ def alternating_split(head):
     result = Context(first_head, second_head)
     if not head.next.next: 
         return result
-    first = first_head
-    second = second_head
+    first, second = first_head, second_head
     pointer = head.next.next
     is_first = True
     while pointer:
