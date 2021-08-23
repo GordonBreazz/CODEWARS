@@ -5,7 +5,6 @@
 #   SOURCE: https://www.codewars.com/kata/59c633e7dcc4053512000073
 #   AUTHOR: https://www.codewars.com/users/GordonBreazz
 # 
-# 
 #     PLOT: Given a lowercase string that has alphabetic characters only and no spaces, 
 #			return the highest value of consonant substrings. Consonants are any letters of the alphabet 
 #			except "aeiou".
