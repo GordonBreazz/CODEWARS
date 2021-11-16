@@ -1,6 +1,6 @@
 #######################################################################################################################################################################################################################################
 # 
-#     KATA: 7 kyu "Path Finder #3: the Alpinist"
+#     KATA: 3 kyu "Path Finder #3: the Alpinist"
 #
 #   SOURCE: https://www.codewars.com/kata/576986639772456f6f00030c
 #   AUTHOR: https://www.codewars.com/users/GordonBreazz
