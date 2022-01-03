@@ -1,6 +1,6 @@
 #######################################################################################################################################################################################################################################
 # 
-#     KATA: 7 kyu "utomorphic Number (Special Numbers Series #6)"
+#     KATA: 7 kyu "Automorphic Number (Special Numbers Series #6)"
 #
 #   SOURCE: https://www.codewars.com/kata/5a58d889880385c2f40000aa
 #   AUTHOR: https://www.codewars.com/users/GordonBreazz
